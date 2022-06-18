@@ -17,7 +17,7 @@ void awal(){
 void tampil(){
     if (T.atas !=-1){
         for(int i=T.atas;i>=0;i--){
-            cout<<endl<<T.data[i];
+            cout<<"\n| "<<T.data[i]<<" |";
         }
         }else{
             cout<<"nyawa habis";
@@ -35,12 +35,9 @@ int acak(){
 }
 
 int display(){
-    cout<<endl;
-   
-    cout<<"sisa nyawa anda: ";
+    cout<<"\nSisa nyawa anda: ";
      tampil();
-     cout<<endl;
-    cout << "Gim  batu gunting kertas" << endl;
+    cout << "\nGim  batu gunting kertas" << endl;
     cout << "-----------------------------------"  << endl;
     cout << "(b) untuk batu " << endl << "(k) untuk kertas" << endl << "(g) gunting " << endl;
     cout << "pilih jagoan anda!"  << endl;
