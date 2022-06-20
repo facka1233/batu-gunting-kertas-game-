@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <time.h>
 #define max 3
 using namespace std;
 char Batu,Kertas,Gunting;
