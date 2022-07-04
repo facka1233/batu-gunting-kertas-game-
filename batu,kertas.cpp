@@ -69,23 +69,23 @@ void situasi(char jawaban, char bot) {
         
     }
     else if (jawaban == Gunting && bot == Batu) {
-        cout << "Blok kalah kok mbek bot su!!"<< endl;
+        cout << "Anda kalah, coba lagi"<< endl;
         T.atas--;
         
     }
     else if (jawaban == Batu && bot == Gunting) {
-        cout << "weleh menang no"<< endl;
+        cout << "Anda menang"<< endl;
         
     }
     else if (jawaban == Kertas && bot == Batu) {
-        cout << "asu iso menang no"<< endl;
+        cout << "Anda menang jangan besar kepala dulu"<< endl;
         
     }
     else if (jawaban == Gunting && bot == Kertas) {
-        cout << "asu menang no"<< endl;
+        cout << "ciee menang"<< endl;
     }
     else{
-        cout << "NT bro" << endl;
+        cout << "Kita seri" << endl;
     }
        
 }
@@ -103,9 +103,9 @@ int main() {
     situasi(jawaban, bot);
   }
  if (T.atas == 2 || T.atas == 1){
-     cout<<"selamat ";
+     cout<<"selamat anda menang ";
  }else if ( T.atas == 0 || T.atas==-1)  {
-     cout<<"kalah ";
+     cout<<"kalah kok sama bot ";
  }
   
 }
