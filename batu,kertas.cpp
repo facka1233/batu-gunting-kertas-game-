@@ -38,6 +38,13 @@ int acak(){
     if(nomor==1) return Gunting;
     if(nomor==2) return Kertas;
 }
+int bonus(){
+    srand (time(0));
+    
+    int number = rand()%4;
+    
+    if(number==0) return 1;
+}
 // fungsi untuk menampilkan tampilan permainan
 int display(){
     cout<<endl;
@@ -91,16 +98,25 @@ void situasi(char jawaban, char bot) {
         cout << "Asek menang"<< endl;
          ronde[i]="menang"; //kalimat menang akan di input ke array ronde menyesuaikan ronde yang sedang berlangsung
          point[0]++; //nilai dari array point indeks ke 0 akan ditambah 1
+         if (bonus()==1 && T.atas!=2){ //jika bonus()=1 maka T.atas akan ditambah 1 sehinggga nyawa bertambah
+         	T.atas++;
+		 }
     }
     else if (jawaban == Kertas && bot == Batu) {
         cout << "Anda menang"<< endl;
         ronde[i]="menang";
         point[0]++;
+          if (bonus()==1 && T.atas!=2){ 
+         	T.atas++;
+		 }
     }
     else if (jawaban == Gunting && bot == Kertas) {
         cout << "Anjay menang"<< endl;
         ronde[i]="menang";
         point[0]++;
+    if (bonus()==1 && T.atas!=2){ 
+         	T.atas++;
+		 }
     }
     else{
         cout << "Seri gan" << endl;
@@ -114,6 +130,9 @@ void inti(){
 	awal();
   for (i=0; i<3;i++){  // ronde akan diadakan sebanyak 3 kali
    display();
+   if (bonus()==1){
+   	cout<<"Bonus nyawa!!!"<<endl;
+   }
     cout << "pilihanmu: "<< endl;
    pilihan(jawaban);
     
@@ -161,12 +180,14 @@ for(i=0;i<2;i++){
 	}
 }
 if (T.atas == 2 || T.atas == 1){
-     cout<<"selamat anda menang dengan skor: "<<endl;
+     cout<<"selamat anda menang dengan skor"<<endl;
+     cout<<"Anda\tBot"<<endl;
  }else if ( T.atas == 0 || T.atas==-1)  {
-     cout<<"Anda kalah dengan skor: "<<endl;
+     cout<<"Anda kalah dengan skor"<<endl;
+     cout<<"Bot\tAnda"<<endl;
  }
 for(i=0;i<2;i++){ //perulangan untuk output skor
-	cout<<point[i]<<"  ";
+	cout<<point[i]<<"\t";
 }
 }
 int main() {
