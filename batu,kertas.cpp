@@ -19,7 +19,7 @@ void awal(){
     T.atas=2; //batas atas awal berada di indeks ke 2
 }
 // void untung menampilkan sisa nyawa
-void tampil(){
+void nyawa(){
     if (T.atas !=-1){
         for(int i=T.atas;i>=0;i--){
             cout<<endl<<T.nyawa[i];
@@ -38,7 +38,7 @@ int acak(){
     if(nomor==1) return Gunting;
     if(nomor==2) return Kertas;
 }
-int bonus(){
+int bonus(){ //untuk merandom bonus nyawa apabila bonus()==1 maka nyawa player akan ditambah 1 apabila menang
     srand (time(0));
     
     int number = rand()%4;
@@ -50,7 +50,7 @@ int display(){
     cout<<endl;
    
     cout<<"sisa nyawa anda: "<<endl;
-     tampil();
+     nyawa();
      cout<<endl;
      cout<<"Ronde "<<i+1;
     cout << "\nGim  batu gunting kertas" << endl;
